@@ -13,9 +13,9 @@ const { isAuthenticated } = require('../helpers/auth');
 });
 router.get('/home', isAuthenticated ,home.index)
   router.get('/:image_id',isAuthenticated, image.index);
-  router.post('/images',isAuthenticated, image.create);
-  router.post('/images/:image_id/like', isAuthenticated,image.like);
-  router.post('/images/:image_id/comment',isAuthenticated, image.comment);
-  router.delete('/images/:image_id', isAuthenticated,image.remove);
+  router.post('/image',isAuthenticated, image.create);
+  router.post('/image/:image_id/like', isAuthenticated,image.like);
+  router.post('/image/:image_id/comment',isAuthenticated, image.comment);
+  router.delete('/image/:image_id', isAuthenticated,image.remove);
 
   module.exports = router;

@@ -7,7 +7,7 @@
   </div>
 
   <div class="card-body">
-    <form action="/image" method="POST" enctype="multipart/form-data">
+    <form action="/images" method="POST" enctype="multipart/form-data">
 
       <div class="form-group">
         <div class="input-group">
@@ -41,8 +41,8 @@
     <div class="row">
       {{#each images}}
       <div class="col-md-4 text-center">
-        <a href="images/upload/{{ uniqueId  }}">
-          <img src="/upload/{{filename}}" alt="{{title}}" class="w-100 h-100 img-thumbnail">
+        <a href="/images/{{ uniqueId  }}">
+          <img src="/public/upload/{{filename}}" alt="{{title}}" class="w-100 h-100 img-thumbnail">
         </a>
       </div>
       {{/each}}
