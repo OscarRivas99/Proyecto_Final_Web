@@ -34,6 +34,7 @@ $(function() {
           $this.find('i').removeClass('fa-times').addClass('fa-check');
           $this.append('<span>Deleted!</span>');
         });
+        res.render('index'); 
     }
   });
 });

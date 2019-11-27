@@ -1,5 +1,5 @@
 module.exports = {
-  Image: require('./image'),
-  Comment: require('./comment')
+  Image: require('./image_data'),
+  Comment: require('./comment_data')
 };
 

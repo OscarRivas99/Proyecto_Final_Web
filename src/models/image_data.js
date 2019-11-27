@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 const path = require('path');
 
+//Obtiene datos de la imagen
 const ImageSchema = new Schema({
   title: { type: String },
   description: { type: String },

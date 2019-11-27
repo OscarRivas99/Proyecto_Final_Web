@@ -3,6 +3,7 @@ const { Image } = require('../models');
 
 const ctrl = {};
 
+//Exporta un mensaje por pantalla 
 ctrl.index = async (req, res) => {
   const images = await Image
     .find()
@@ -13,4 +14,4 @@ ctrl.index = async (req, res) => {
   res.render('index', viewModel);
 };
 
-module.exports = ctrl;
+module.exports = ctrl; //exporta la funcion index

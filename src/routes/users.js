@@ -3,6 +3,7 @@ const router = express.Router();
 const passport = require('passport');
 const home = require('../controllers/home');
 
+
 // Models
 const User = require('../models/Users');
 
@@ -11,6 +12,7 @@ router.get('/users/signin', (req,res)=>{
     res.render('users/signin');
   });
 
+  //Envia si el usuario es correcto
   router.post('/users/signin', passport.authenticate('local', {
     successRedirect: '/home' ,
     failureRedirect: '/users/signin',
@@ -31,6 +33,7 @@ router.get('/users/signin', (req,res)=>{
     res.render('users/signup');
   });
 
+  //Agrega un nuevo usuario
 router.post('/users/signup', async (req, res) => {
   let errors = [];
   const { name, email, password, confirm_password } = req.body;
@@ -55,6 +58,9 @@ router.post('/users/signup', async (req, res) => {
       await newUser.save();
       req.flash('success_msg', 'You are registered.');
       res.redirect('/users/signin');
+
+      //Delete one image 
+  
         
       
     }

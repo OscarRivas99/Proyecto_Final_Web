@@ -3,6 +3,7 @@ const { Schema } = mongoose;
 const ObjectId = Schema.ObjectId;
 const path = require('path');
 
+//Obtiene datos del comentario
 const CommentSchema = new Schema({
   image_id: { type: ObjectId },
   email: { type: String },

@@ -26,6 +26,7 @@ ctrl.index = async (req, res) => {
   }
 };
 
+//Save image 
 ctrl.create = (req, res) => {
   const saveImage = async () => {
     const imgUrl = randomNumber();
@@ -59,6 +60,7 @@ ctrl.create = (req, res) => {
   saveImage();
 };
 
+//Like image
 ctrl.like = async (req, res) => {
   const image = await Image.findOne({filename: {$regex: req.params.image_id}});
   console.log(image)
@@ -71,6 +73,7 @@ ctrl.like = async (req, res) => {
   }
 };
 
+//add comments
 ctrl.comment= async (req, res) => {
   const image = await Image.findOne({filename: {$regex: req.params.image_id}});
   if (image) {
@@ -84,6 +87,7 @@ ctrl.comment= async (req, res) => {
   }
 };
 
+// Delete image
 ctrl.remove = async (req, res) => {
   const image = await Image.findOne({filename: {$regex: req.params.image_id}});
   if (image) {
@@ -91,9 +95,11 @@ ctrl.remove = async (req, res) => {
     await Comment.deleteOne({image_id: image._id});
     await image.remove();
     res.json(true);
+    //////////////////////////redirigiendo a las imagenes
   } else {
     res.json({response: 'Bad Request.'})
   }
+  
 };
 
 module.exports = ctrl;
