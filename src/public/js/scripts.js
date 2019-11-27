@@ -11,7 +11,7 @@ $(function() {
     e.preventDefault();
     let imgId = $(this).data('id');
     console.log(imgId)
-    $.post('/images/' + imgId + '/like')
+    $.post('/image/' + imgId + '/like')
       .done(data => {
       console.log('back:', data)
         $('.likes-count').text(data.likes);
@@ -26,7 +26,7 @@ $(function() {
     if (response) {
       let imgId = $(this).data('id');
       $.ajax({
-        url: '/images/' + imgId,
+        url: '/image/' + imgId,
         type: 'DELETE'
       })
         .done(function(result) {

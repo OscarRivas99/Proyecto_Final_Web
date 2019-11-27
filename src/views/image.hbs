@@ -39,7 +39,7 @@
   </div>
   <div class="card-body">
     <blockquote id="post-comment">
-      <form action="/upload/{{ image.uniqueId }}/comment" method="POST">
+      <form action="/image/{{ image.uniqueId }}/comment" method="POST">
         <div class="form-group">
           <input type="text" class="form-control" name="name" placeholder="Name">
         </div>
@@ -54,7 +54,7 @@
             <i class="fa fa-comment"></i> Post
           </button>
         </div>
-      </form>      
+      </form>
     </blockquote>
     <ul class="list-group p-4">
       {{#each comments}}

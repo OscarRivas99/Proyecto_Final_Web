@@ -12,7 +12,7 @@ const { isAuthenticated } = require('../helpers/auth');
   res.render('main');
 });
 router.get('/home', isAuthenticated ,home.index)
-  router.get('/:image_id',isAuthenticated, image.index);
+  router.get('/image/:image_id',isAuthenticated, image.index);
   router.post('/image',isAuthenticated, image.create);
   router.post('/image/:image_id/like', isAuthenticated,image.like);
   router.post('/image/:image_id/comment',isAuthenticated, image.comment);
