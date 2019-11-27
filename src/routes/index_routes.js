@@ -7,7 +7,7 @@ const image = require('../controllers/image');
 
 const { isAuthenticated } = require('../helpers/auth');
 
- //
+ //Definiendo rutas
  router.get('/', (req, res) => {
   res.render('main');
 });

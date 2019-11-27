@@ -9,6 +9,7 @@ module.exports = async viewModel => {
     Images.popular(),
     Comments.newest()
   ]);
+  
 
   viewModel.sidebar = {
     stats: results[0],

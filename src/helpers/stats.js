@@ -4,7 +4,6 @@ async function imageCounter() {
   return await Image.countDocuments();
 };
 
-
 async function commentsCounter() {
   return await Comment.countDocuments();
 }

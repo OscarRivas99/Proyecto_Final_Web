@@ -13,6 +13,7 @@ router.get('/users/signin', (req,res)=>{
   });
 
   //Envia si el usuario es correcto
+  
   router.post('/users/signin', passport.authenticate('local', {
     successRedirect: '/home' ,
     failureRedirect: '/users/signin',

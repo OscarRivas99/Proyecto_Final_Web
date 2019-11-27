@@ -53,7 +53,6 @@ app.use((req, res, next) => {
   app.use(require('./routes/index_routes'));
   app.use(require('./routes/users'));
   
-
   // Static files
   app.use(express.static(path.join(__dirname, 'public')));
 
@@ -61,9 +60,7 @@ app.use((req, res, next) => {
   if('development' === app.get('env')) {
     app.use(errorHandler());
   }
-
   
-
 // database
 require('./database');
 require('./config/passport');

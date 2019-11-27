@@ -3,7 +3,6 @@ const { Schema } = mongoose;
 const ObjectId = Schema.ObjectId;
 const path = require('path');
 
-//Definiendo modelo de un comentario
 const CommentSchema = new Schema({
   image_id: { type: ObjectId },
   email: { type: String },
@@ -11,6 +10,7 @@ const CommentSchema = new Schema({
   gravatar: { type: String },
   comment: { type: String },
   timestamp: { type: Date, default: Date.now }
+  
 });
 
 CommentSchema.virtual('image')

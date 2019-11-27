@@ -10,7 +10,8 @@ module.exports = {
     for(const comment of comments) {
       const image = await Image.findOne({_id: comment.image_id});
       comment.image = image;
-    }
+
+      }
 
     return comments;
   }

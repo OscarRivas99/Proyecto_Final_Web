@@ -17,9 +17,11 @@ passport.use(new LocalStrategy({
     if(match) {
       return done(null, user); //callback
     } else {
+      
       return done(null, false, { message: 'Incorrect Password.' });
     }
   }
+
 
 }));
 

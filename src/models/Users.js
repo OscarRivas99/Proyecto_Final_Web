@@ -3,11 +3,13 @@ const { Schema } = mongoose;
 
 const bcrypt = require('bcryptjs');
 
+//definiendo modelo de un usuario
 const UserSchema = new Schema({
   name: { type: String, required: true },
   email: { type: String, required: true },
   password: { type: String, required: true },
   date: { type: Date, default: Date.now }
+
 });
 
 UserSchema.methods.encryptPassword = async (password) => {

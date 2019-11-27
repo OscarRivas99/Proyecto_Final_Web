@@ -7,6 +7,7 @@ $(function() {
   });
   
   // Like Button Request
+  
   $('#btn-like').click(function(e) {
     e.preventDefault();
     let imgId = $(this).data('id');
